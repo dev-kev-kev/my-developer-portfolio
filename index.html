@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kevin Knop</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <ul class="flex justify-center">
+        <ul class="flex justify-center font-bigger">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about-me">About Me</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -21,15 +27,18 @@
 
     <main>
       <section class="text-center" id="hero">
-        <h1 class="text-center">Kevin Knop - Junior Frontend-Developer</h1>
+        <h1 class="text-center">Kevin Knop</h1>
+        <p>Junior Frontend-Developer</p>
       </section>
 
-      <section class="text-center" id="about-me">
+      <section class="margin-top" id="about-me">
         <h2 class="text-center">About Me</h2>
-        <div class="about-content-flex">
-          <div><img src="img\logo1.png" alt="picture of Kevin Knop" /></div>
+        <div class="flex">
+          <div class="width-50 flex justify-center">
+            <img src="img\logo1.png" alt="picture of Kevin Knop" />
+          </div>
 
-          <div>
+          <div class="width-50 flex align-center">
             <blockquote>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Necessitatibus, quidem! Lorem ipsum dolor, sit amet consectetur
@@ -40,7 +49,20 @@
         </div>
       </section>
 
-      <section class="text-center" id="skills"><h2>My Skills</h2></section>
+      <section class="text-center" id="skills">
+        <h2>My Skills</h2>
+        <ul class="flex font-bigger">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+
+          <li>React</li>
+          <li>Tailwind CSS</li>
+
+          <li>Git & GitHub</li>
+          <li>REST API's</li>
+        </ul>
+      </section>
 
       <section class="text-center" id="projects"><h2>Projects</h2></section>
 
@@ -49,7 +71,7 @@
       </section>
     </main>
 
-    <footer class="text-center">
+    <footer class="text-center font-bigger">
       <p>&copy; 2025 Kevin Knop. All rights reserved.</p>
     </footer>
   </body>
