@@ -5,8 +5,17 @@
   --color-text-main: #1f2937; /* Dunkelgrau für Haupttexte */
   --color-text-light: #4b5563; /* Mittelgrau für Akzente */
   --color-accent: #008080; /* Deep Teal (Sehr professionelle Akzentfarbe) */
-  --color-shadow: rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+  --color-shadow: rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
   --color-header-bg: #e5e7eb; /* Heller Header Hintergrund */
+
+  /* Dunklere Farben (Dark Mode) */
+  --color-bg-body-dark: #121212; /* Sehr dunkler Hintergrund */
+  --color-bg-card-dark: #1e1e1e; /* Dunkle Karten/Badges */
+  --color-text-main-dark: #e0e0e0; /* Heller Text für Dunkelmodus */
+  --color-text-light-dark: #a0a0a0; /* Mittelheller Text für Akzente */
+  --color-accent-dark: #00b3b3; /* Helleres Teal für Dunkelmodus */
+  --color-shadow-dark: rgba(0, 0, 0, 0.5); /* Stärkerer Schatten */
+  --color-header-bg-dark: #1f1f1f; /* Dunkler Header Hintergrund */
 }
 * {
   margin: 0;
@@ -15,33 +24,61 @@
   font-family: "Roboto", sans-serif;
 }
 body {
-  background-color: var(--color-bg-body);
+  background-color: var(--color-bg-body); /* Heller Hintergrund */
   color: var(--color-text-main);
 }
 header {
   background-color: var(--color-header-bg);
-  color: var(--color-text-main); /* Text im Header ist jetzt dunkel */
-  padding: 1rem 0;
-}
-nav a {
   color: var(--color-text-main);
-  padding: 0 0.6rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
 }
-nav a:hover {
+.theme-toggle {
+  /* Positioniere den Button in der oberen rechten Ecke */
+  position: absolute;
+  top: 0.6rem;
+  right: 2rem;
+  z-index: 200; /* Stellt sicher, dass er immer sichtbar ist */
+
+  /* Entferne das Standard-Button-Styling */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+nav {
+  display: flex; /* Navigationsleiste ist ein Flex-Container */
+  justify-content: center; /* Zentriert die UL horizontal */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links li a:hover {
   color: var(--color-accent);
 }
 ul {
   list-style-type: none;
 }
-a {
+.nav-links li a {
+  /* Links werden mit der Akzentfarbe beim Hover hervorgehoben */
+  color: var(--color-text-main);
+  padding: 0.6rem 1rem;
+  transition: color 0.3s;
   text-decoration: none;
-  /* Linkfarbe ist die Akzentfarbe */
-  color: var(--color-accent);
-  padding: 0 0.6rem;
+}
+.menu-toggle,
+.hamburger-icon {
+  display: none;
 }
 main {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 section {
   margin: 1rem 0;
@@ -55,6 +92,11 @@ section {
 }
 .font-bigger {
   font-size: 1.2rem;
+}
+.img-kev {
+  width: 60%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px var(--color-shadow);
 }
 blockquote {
   font-style: italic;
@@ -113,17 +155,63 @@ blockquote {
 .project-card:hover {
   transform: translateY(-5px);
 }
-
 .project-card h3 {
   margin-bottom: 0.5rem;
 }
-
 .project-card a {
   display: inline-block;
   margin-top: 1rem;
   /* Akzentfarbe für Links */
   color: var(--color-accent);
   font-weight: bold;
+}
+.contact-form {
+  min-width: 60%;
+  text-align: left; /* Textausrichtung im Formular */
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: var(--color-bg-card); /* Weißer Hintergrund (Kontrast) */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--color-shadow);
+}
+.form-row {
+  gap: 1.5rem; /* Abstand zwischen Name und E-Mail */
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+label {
+  display: block; /* Label soll über dem Input stehen */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--color-text-main);
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Wichtig: Padding wird in die Breite einbezogen */
+}
+textarea {
+  resize: vertical; /* Nur vertikale Größenänderung erlauben */
+}
+.btn {
+  /* Styles des Buttons (wie bereits bei Projekten definiert) */
+  background-color: var(--color-accent);
+  color: var(--color-bg-card); /* Weißer Text */
+  margin: 1rem 0;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #006666; /* Dunklere Akzentfarbe beim Hover */
 }
 footer {
   /* Kontrast: Dunkler oder Akzentfarbe für den Footer */
@@ -140,6 +228,52 @@ footer {
   }
 }
 @media (max-width: 480px) {
+  nav {
+    justify-content: space-between; /* Links und Hamburger an die Ränder schieben */
+    padding: 0 5%; /* Innenabstand für die Ränder */
+  }
+  .hamburger-icon {
+    display: block; /* Zeigt das Icon nur auf Mobilgeräten */
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 100; /* Stellt sicher, dass das Icon über allem liegt */
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--color-text-main);
+    transition: 0.4s;
+    border-radius: 2px;
+  }
+
+  /* 2. Navigationsliste als Overlay vorbereiten */
+  .nav-links {
+    /* Positioniere das Menü über die gesamte Ansicht */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Volle Höhe des Viewports */
+
+    background-color: var(--color-header-bg);
+
+    /* Liste vertikal anordnen */
+    flex-direction: column;
+    padding-top: 80px; /* Platz für das Hamburger-Icon oben lassen */
+
+    /* Die Magie: Menü standardmäßig außerhalb des Bildschirms schieben */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 90;
+  }
+
+  /* 3. Der CSS-Hack: Öffne das Menü, wenn die versteckte Checkbox angeklickt wird! */
+  .nav-links.menu-open {
+    transform: translateX(0); /* Menü in den Viewport schieben, wenn Klasse aktiv */
+  }
   #about-me .flex {
     flex-direction: column;
     align-items: center;
@@ -153,6 +287,22 @@ footer {
     padding-left: 0;
   }
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Einspaltiges Layout auf kleinen Bildschirmen */
+  }
+  .img-kev {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .contact-form {
+    min-width: 100%; /* Formular nimmt volle Breite ein */
+    padding: 1rem;
+  }
+  .contact-form .form-row {
+    flex-direction: column; /* Stellt die Felder untereinander */
+    gap: 0;
+  }
+  .contact-form .form-row .form-group {
+    width: 100%; /* Felder nehmen volle Breite ein */
+    margin-bottom: 1rem;
   }
 }

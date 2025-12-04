@@ -14,9 +14,20 @@
   </head>
   <body>
     <header>
+      <button id="theme-toggle" class="theme-toggle">
+        <span role="img" aria-label="Dark Mode Switch">🌙</span>
+      </button>
+
       <nav>
-        <ul class="flex justify-center font-bigger">
-          <li><a href="#hero">Home</a></li>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+        <label for="menu-toggle" class="hamburger-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
+        <ul class="nav-links font-bigger">
           <li><a href="#about-me">About Me</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -35,15 +46,14 @@
         <h2 class="text-center">About Me</h2>
         <div class="flex">
           <div class="width-50 flex justify-center">
-            <img src="img/logo1.png" alt="picture of Kevin Knop" />
+            <img src="img/img-kev-square.jpg" alt="picture of Kevin Knop" class="img-kev" />
           </div>
 
           <div class="width-50 flex align-center">
             <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Necessitatibus, quidem! Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Recusandae perferendis doloremque numquam
-              consequuntur laborum adipisci!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quidem!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae perferendis
+              doloremque numquam consequuntur laborum adipisci!
             </blockquote>
           </div>
         </div>
@@ -69,10 +79,7 @@
         <div class="projects-grid mg-tb-3">
           <div class="project-card">
             <h3>Portfolio Website</h3>
-            <p>
-              My personal developer portfolio built with semantic HTML5 and
-              modern CSS.
-            </p>
+            <p>My personal developer portfolio built with semantic HTML5 and modern CSS.</p>
             <a href="#">View Code</a>
           </div>
 
@@ -92,11 +99,43 @@
 
       <section class="text-center" id="contact">
         <h2>Get In Touch With Me</h2>
+
+        <div class="contact-container flex justify-center mg-tb-3">
+          <form action="" class="contact-form">
+            <div class="form-row flex">
+              <div class="form-group width-50">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group width-50">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+
+            <div>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn">Send Message</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="text-center font-bigger">
       <p>&copy; 2025 Kevin Knop. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
