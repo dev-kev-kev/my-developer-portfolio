@@ -1,0 +1,125 @@
+/* --- CSS RESET & VARIABLEN --- */
+:root {
+  --primary-color: #008080; /* Dein Teal aus dem Portfolio */
+  --secondary-color: #f3f4f6; /* Heller Hintergrund */
+  --text-color: #1f2937;
+  --card-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Statt center, um Inhalt oben zu halten */
+  min-height: 100vh;
+  padding-top: 30px;
+}
+
+/* --- APP CONTAINER --- */
+.app-container {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Begrenzte Breite für Lesbarkeit */
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+h2 {
+  color: var(--text-color);
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* --- FORM & INPUT --- */
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#add-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+  background-color: #006666;
+}
+
+/* --- LISTEN --- */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.task-list li:hover {
+  background-color: #e0e0e0;
+}
+
+.task-text {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: var(--color-text-light);
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* --- ERLEDIGTE LISTE --- */
+#completed-tasks-section {
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none;
+}

@@ -24,6 +24,7 @@
         "form_subject": "Subject:",
         "form_message": "Message:",
         "btn_send": "Send Message",
+        "btn_view": "View Project",
         
         "footer_text": "\u00A9 All rights reserved."
     },
@@ -52,6 +53,7 @@
         "form_subject": "Betreff:",
         "form_message": "Nachricht:",
         "btn_send": "Nachricht senden",
+        "btn_view": "Projekt ansehen",
         
         "footer_text": "\u00A9 Alle Rechte vorbehalten."
     }

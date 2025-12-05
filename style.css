@@ -196,6 +196,7 @@ blockquote {
   margin-top: 1rem;
   color: var(--color-accent);
   font-weight: bold;
+  margin-right: 15px;
 }
 
 /* Contact Form */

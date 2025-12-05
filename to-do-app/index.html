@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS To-Do App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="app-container">
+      <header>
+        <h1>Meine Aufgaben</h1>
+      </header>
+
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Neue Aufgabe hinzufügen..." required />
+        <button type="submit" id="add-btn">Hinzufügen</button>
+      </form>
+
+      <div class="lists-container">
+        <section id="active-tasks-section">
+          <h2>Offene Aufgaben</h2>
+          <ul id="active-list" class="task-list"></ul>
+        </section>
+
+        <section id="completed-tasks-section" class="hidden">
+          <h2>Erledigt</h2>
+          <ul id="completed-list" class="task-list"></ul>
+          <button id="clear-completed-btn" class="clear-btn">Erledigte löschen</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
