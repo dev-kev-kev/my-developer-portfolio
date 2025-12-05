@@ -1,0 +1,58 @@
+{
+    "en": {
+        "hero_subtitle": "Junior Frontend Developer",
+        "nav_about": "About Me",
+        "nav_skills": "Skills",
+        "nav_projects": "Projects",
+        "nav_contact": "Contact",
+        "about_heading": "About Me",
+        "about_text": "Driven by clean code, inspired by great design. Every line I write is a step toward a better user experience.",
+        "skills_heading": "My Skills",
+        "projects_heading": "Projects",
+        "contact_heading": "Get In Touch With Me",
+        
+        "project1_title": "Portfolio Website",
+        "project1_desc": "My personal developer portfolio built with semantic HTML5 and modern CSS.",
+        "project2_title": "To-Do App",
+        "project2_desc": "A JavaScript interaction demo using Local Storage.",
+        "project3_title": "Weather Dashboard",
+        "project3_desc": "Fetching data from a public API using Async/Await.",
+        "btn_code": "View Code",
+
+        "form_name": "Name:",
+        "form_email": "Email:",
+        "form_subject": "Subject:",
+        "form_message": "Message:",
+        "btn_send": "Send Message",
+        
+        "footer_text": "\u00A9 All rights reserved."
+    },
+    "de": {
+        "hero_subtitle": "Junior Frontend-Entwickler",
+        "nav_about": "Über Mich",
+        "nav_skills": "Fähigkeiten",
+        "nav_projects": "Projekte",
+        "nav_contact": "Kontakt",
+        "about_heading": "Über Mich",
+        "about_text": "Angetrieben von sauberem Code, inspiriert von großartigem Design. Jede Zeile Code ist ein Schritt zu einer besseren User Experience.",
+        "skills_heading": "Meine Fähigkeiten",
+        "projects_heading": "Projekte",
+        "contact_heading": "Kontaktieren Sie mich",
+        
+        "project1_title": "Portfolio-Website",
+        "project1_desc": "Mein persönliches Entwickler-Portfolio, erstellt mit semantischem HTML5 und modernem CSS.",
+        "project2_title": "To-Do App",
+        "project2_desc": "Eine JavaScript Interaktions-Demo unter Verwendung von Local Storage.",
+        "project3_title": "Wetter-Dashboard",
+        "project3_desc": "Abrufen von Daten von einer öffentlichen API unter Verwendung von Async/Await.",
+        "btn_code": "Code ansehen",
+
+        "form_name": "Name:",
+        "form_email": "Email:",
+        "form_subject": "Betreff:",
+        "form_message": "Nachricht:",
+        "btn_send": "Nachricht senden",
+        
+        "footer_text": "\u00A9 Alle Rechte vorbehalten."
+    }
+}

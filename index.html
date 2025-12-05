@@ -14,118 +14,118 @@
   </head>
   <body>
     <header>
-      <button id="theme-toggle" class="theme-toggle">
-        <span role="img" aria-label="Dark Mode Switch">🌙</span>
-      </button>
+      <div class="header-controls">
+        <select id="lang-switch" class="lang-switch">
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+        </select>
+
+        <button id="theme-toggle" class="theme-toggle">
+          <span role="img" aria-label="Dark Mode Switch">🌙</span>
+        </button>
+      </div>
 
       <nav>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-
-        <label for="menu-toggle" class="hamburger-icon">
+        <div class="hamburger-icon">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </label>
+        </div>
 
         <ul class="nav-links font-bigger">
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-me" data-i18n="nav_about"></a></li>
+          <li><a href="#skills" data-i18n="nav_skills"></a></li>
+          <li><a href="#projects" data-i18n="nav_projects"></a></li>
+          <li><a href="#contact" data-i18n="nav_contact"></a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="text-center" id="hero">
-        <h1 class="text-center">Kevin Knop</h1>
-        <p>Junior Frontend-Developer</p>
+        <h1 class="text-center" data-i18n="hero_title"></h1>
+        <p data-i18n="hero_subtitle"></p>
       </section>
 
       <section class="mg-tb-3" id="about-me">
-        <h2 class="text-center">About Me</h2>
+        <h2 class="text-center" data-i18n="about_heading"></h2>
         <div class="flex">
           <div class="width-50 flex justify-center">
             <img src="img/img-kev-square.jpg" alt="picture of Kevin Knop" class="img-kev" />
           </div>
 
           <div class="width-50 flex align-center">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quidem!
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae perferendis
-              doloremque numquam consequuntur laborum adipisci!
-            </blockquote>
+            <blockquote data-i18n="about_text"></blockquote>
           </div>
         </div>
       </section>
 
       <section class="text-center" id="skills">
-        <h2>My Skills</h2>
+        <h2 data-i18n="skills_heading"></h2>
         <ul class="flex font-bigger mg-tb-3">
           <li>HTML5</li>
           <li>CSS3</li>
           <li>JavaScript (ES6+)</li>
-
           <li>React</li>
           <li>Tailwind CSS</li>
-
           <li>Git & GitHub</li>
           <li>REST API's</li>
         </ul>
       </section>
 
       <section class="text-center" id="projects">
-        <h2>Projects</h2>
+        <h2 data-i18n="projects_heading"></h2>
+
         <div class="projects-grid mg-tb-3">
           <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>My personal developer portfolio built with semantic HTML5 and modern CSS.</p>
-            <a href="#">View Code</a>
+            <h3 data-i18n="project1_title"></h3>
+            <p data-i18n="project1_desc"></p>
+            <a href="#" data-i18n="btn_code"></a>
           </div>
 
           <div class="project-card">
-            <h3>To-Do App</h3>
-            <p>A JavaScript interaction demo using Local Storage.</p>
-            <a href="#">View Code</a>
+            <h3 data-i18n="project2_title"></h3>
+            <p data-i18n="project2_desc"></p>
+            <a href="#" data-i18n="btn_code"></a>
           </div>
 
           <div class="project-card">
-            <h3>Weather Dashboard</h3>
-            <p>Fetching data from a public API using Async/Await.</p>
-            <a href="#">View Code</a>
+            <h3 data-i18n="project3_title"></h3>
+            <p data-i18n="project3_desc"></p>
+            <a href="#" data-i18n="btn_code"></a>
           </div>
         </div>
       </section>
 
       <section class="text-center" id="contact">
-        <h2>Get In Touch With Me</h2>
+        <h2 data-i18n="contact_heading"></h2>
 
         <div class="contact-container flex justify-center mg-tb-3">
           <form action="" class="contact-form">
             <div class="form-row flex">
               <div class="form-group width-50">
-                <label for="name">Name:</label>
+                <label for="name" data-i18n="form_name"></label>
                 <input type="text" id="name" name="name" required />
               </div>
 
               <div class="form-group width-50">
-                <label for="email">Email:</label>
+                <label for="email" data-i18n="form_email"></label>
                 <input type="email" id="email" name="email" required />
               </div>
             </div>
 
             <div class="form-group">
-              <label for="subject">Subject:</label>
+              <label for="subject" data-i18n="form_subject"></label>
               <input type="text" id="subject" name="subject" required />
             </div>
 
             <div>
-              <label for="message">Message:</label>
+              <label for="message" data-i18n="form_message"></label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
 
             <div>
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn" data-i18n="btn_send"></button>
             </div>
           </form>
         </div>
@@ -133,8 +133,10 @@
     </main>
 
     <footer class="text-center font-bigger">
-      <p>&copy; 2025 Kevin Knop. All rights reserved.</p>
+      <p data-i18n="footer_text"></p>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
 
     <script src="script.js"></script>
   </body>
